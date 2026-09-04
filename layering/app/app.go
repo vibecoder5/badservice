@@ -22,7 +22,7 @@ func (a App) Start() {
 
 		err := json.NewDecoder(r.Body).Decode(&req)
 		if err != nil {
-			w.Write([]byte("error"))
+			_, _ = w.Write([]byte("error"))
 			return
 		}
 
